@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "./Button";
 
 export default function UserCard(props) {
   return (
@@ -15,14 +14,18 @@ export default function UserCard(props) {
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[3] flex">
           <div className="relative block font-bold bottom-10 duration-500 translate-y-40 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-hover:delay-100">
-            <Button variant="link">Click for Details</Button>
+            <button className="bg-transparent py-3 px-4 rounded-lg font-semibold text-sm border-0 text-grey-900 hover:text-white focus:ring-transparent focus:outline-none focus:bg-gray-50 focus:bg-opacity-10">
+              Click for Details
+            </button>
           </div>
         </div>
 
         <div className="absolute bottom-0 left-0 bg-white w-full h-28 z-[1] p-0">
           <h2 className="my-9 mx-0 p-0 text-center text-black text-2xl font-semibold">
             {`${props.userData.first_name} ${props.userData.last_name}`}
-            <div className="text-base text-[#333] font-light">UI Developer</div>
+            <div className="text-base text-[#333] font-light">
+              Software Engineer
+            </div>
           </h2>
         </div>
       </div>
